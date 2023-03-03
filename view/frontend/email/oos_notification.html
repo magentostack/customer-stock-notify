@@ -1,0 +1,48 @@
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr>
+		<td align="center" valign="top" style="padding:20px 0 20px 0">
+			<table cellspacing="0" cellpadding="10" style="border:1px solid #E0E0E0;">
+				<tr aria-colspan="3">
+					<td colspan="3" valign="top">
+						<h1 style="font-size:22px;font-weight:normal;line-height:22px;margin:0 0 11px 0;">
+							{{trans "Hello"}} {{var customer_name}},</h1>
+					</td>
+				</tr>
+				<tr aria-colspan="3">
+					<td>
+						<table cellspacing="0" cellpadding="10" style="padding:15px;">
+							<tbody style="border:1px solid #EAEAEA;">
+								<tr aria-colspan="3">
+									<td colspan="3" valign="top">
+										{{var message}}
+									</td>
+								</tr>
+								<tr style="background-color: #e0e0e0;">
+									<td align="left" valign="center">
+										<img src="{{var product_img_url}}" alt="" height="50" width="50"
+											class="" />
+									</td>
+									<td align="left" valign="center">
+										Product name: <strong>{{var product_name}}</strong>
+									</td>
+                                    <td align="left" valign="center">
+                                        <a href="{{var product_url}}">Product URL</a>
+                                    </td>
+									<td align="left" valign="center">
+										<div style="height:25px">Product sku: {{var product_sku}}</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="background:#EAEAEA;text-align:center;">
+							<h4>Thank you</h4>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+{{template config_path="design/email/footer_template"}}

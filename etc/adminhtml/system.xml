@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="notification_options" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                 translate="label">
+            <class>separator-top</class>
+            <label>Out of Stock Notification</label>
+            <tab>wmz</tab>
+            <resource>WMZ_OutOfStockNotifications::config</resource>
+            <group id="configuration" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                   translate="label">
+                <label>Configurations</label>
+                <field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label"
+                       type="select">
+                    <label>Enabled the extension</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="notification_msg" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                       translate="label" type="textarea">
+                    <label>Notification Message</label>
+                    <comment/>
+                </field>
+                <field id="success_msg" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                       translate="label" type="textarea">
+                    <label>Success Message</label>
+                    <comment/>
+                </field>
+                <field id="email_frequency" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Email Sending Frequency</label>
+                    <config_path>notification_options/configuration/email_frequency</config_path>
+                    <comment>Process emails at every 5th minute : */5 * * * *</comment>
+                    <tooltip>After how much time a cron should run to process Email to the customers?</tooltip>
+                </field>
+                <field id="customer_groups" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                       translate="label" type="multiselect">
+                    <label>Allowed Customer Groups</label>
+                    <comment>Choose customer groups to enable notifications</comment>
+                    <source_model>WMZ\OutOfStockNotifications\Model\Config\Source\CustomerGroups</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

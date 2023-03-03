@@ -1,0 +1,17 @@
+{
+    "wmz_outofstock_notification_requests": {
+        "column": {
+            "entity_id": true,
+            "customer_email": true,
+            "product_id": true,
+            "subscribed_at": true,
+            "status": true
+        },
+        "index": {
+            "WMZ_OUTOFSTOCK_NOTIFICATION_REQUESTS_CUSTOMER_EMAIL": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

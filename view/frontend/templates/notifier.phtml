@@ -1,0 +1,40 @@
+<?php
+/** @var $block Notifier */
+
+use WMZ\OutOfStockNotifications\Block\Notifier;
+
+?>
+<div>
+    <?php if ($block->displayInputField() === true) { ?>
+        <div class="outofstocknotifier-block">
+            <form id="form-validate-stock" method="post">
+                <div class="notif_inside_container">
+                    <span class="alert_icon"><strong><?= /** @noEscape */
+                            $block->getNotificationMessage(); ?></strong></span>
+                    <div>
+                        <span class="show_msg_div_wait"></span>
+                        <span class="show_msg_div"></span>
+                    </div>
+                    <input name="email" placeholder="Enter your email address"
+                           class="input-text outofstocknotifier_email" id="outofstocknotifier_email-5" size="15"
+                           type="email" data-validate="{required:true, 'validate-email':true}"/>
+                    <input type="hidden" name="product_id" value="<?= /** @noEscape */
+                    $block->getCurrentProduct()->getId(); ?>"/>
+                    <input name="form_key" type="hidden" value="<?= /** @noEscape */
+                    $block->getFormKey(); ?>"/>
+                    <div class="button_div">
+                        <button type="submit" class="action submit primary">
+                            <span>Subscribe</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <?php } ?>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'notifier'], function ($, notifier) {
+        notifier();
+    });
+</script>

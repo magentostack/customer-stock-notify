@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WMZ_OutOfStockNotifications::menu"
+             title="Out of Stock Notifications"
+             module="WMZ_OutOfStockNotifications"
+             sortOrder="60"
+             resource="WMZ_OutOfStockNotifications::menu"
+             parent="WMZ_Core::wmz"
+        />
+        <add id="WMZ_OutOfStockNotifications::configuration"
+             title="Configuration"
+             module="WMZ_OutOfStockNotifications"
+             sortOrder="10"
+             action="adminhtml/system_config/edit/section/notification_options"
+             resource="WMZ_OutOfStockNotifications::confnsub"
+             parent="WMZ_OutOfStockNotifications::menu"
+        />
+        <add id="WMZ_OutOfStockNotifications::root_notifs_grid"
+             title="List of Subscribers"
+             module="WMZ_OutOfStockNotifications"
+             sortOrder="35" action="outofstocknotifs/grid/notificationsubscribers"
+             resource="WMZ_OutOfStockNotifications::confnsub"
+             parent="WMZ_OutOfStockNotifications::menu"
+        />
+    </menu>
+</config>

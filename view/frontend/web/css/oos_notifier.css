@@ -1,0 +1,32 @@
+.notif_inside_container {
+    margin: 10px auto;
+    display: block;
+    padding: 15px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.notif_inside_container span {
+    margin: 5px;
+    display: block;
+    padding: 5px;
+    text-align: left;
+    width: auto;
+}
+
+.notif_inside_container .outofstocknotifier_email {
+    padding: 5px;
+}
+
+.notif_inside_container button {
+    margin: 5px;
+    padding: 0px !important;
+}
+
+.notif_inside_container .show_msg_div {
+    font-size: 11px;
+    margin-top: 7px;
+    color: green;
+}
+

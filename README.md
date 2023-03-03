@@ -1,0 +1,1 @@
+Out-of-stock notification extension helps the vendor(s) let the customer(s) subscribe to the specific product(s) if it is out of stock at that time. The customer(s) will get the email once the product is available on the website. This extension works for community, enterprise and cloud versions.

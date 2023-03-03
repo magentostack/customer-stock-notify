@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job instance="WMZ\OutOfStockNotifications\Model\Cron\Email" method="sendEmails"
+             name="oos_notifs_send_emails">
+            <config_path>notification_options/configuration/email_frequency</config_path>
+        </job>
+    </group>
+</config>

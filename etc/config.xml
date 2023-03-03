@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <notification_options>
+            <configuration>
+                <enabled>1</enabled>
+                <notification_msg>Notify me when the product is available.</notification_msg>
+                <success_msg>Thanks for your interest in this item. You will receive a Notification once the product gets restocked.</success_msg>
+            </configuration>
+        </notification_options>
+    </default>
+</config>

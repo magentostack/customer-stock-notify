@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="wmz_outofstock_notification_requests" resource="default" engine="innodb"
+           comment="WMZ Outofstock notifications form entries table">
+        <column xsi:type="int" name="entity_id" padding="16" unsigned="true" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="customer_email" length="250" nullable="false"
+                comment="Customer or Guest Email"/>
+        <column xsi:type="int" name="product_id" nullable="false" comment="Product ID"/>
+        <column xsi:type="datetime" name="subscribed_at" nullable="false" comment="Time of customer subscription"/>
+        <column xsi:type="tinyint" name="status" nullable="true"
+                comment="Status Flag = 2 for email sent, 1 for email to-be-sent, 0 for out of stock"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <index referenceId="INDEX_EMAIL" indexType="btree">
+            <column name="customer_email"/>
+        </index>
+    </table>
+</schema>

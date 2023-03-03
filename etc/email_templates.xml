@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="oos_notification_template" label="Product back in-stock Notification Email"
+              file="oos_notification.html" type="html" module="WMZ_OutOfStockNotifications" area="frontend"/>
+</config>
